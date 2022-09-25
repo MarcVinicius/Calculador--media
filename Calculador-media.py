@@ -7,12 +7,18 @@ while True:
     if resposta == 'S':
         if vezes == 0:
             num = input("Digite o primeiro número: ")
-            vezes += 1
-            nums.append(num)
+            if num.isnumeric() == True:
+                nums.append(num)
+                vezes += 1
+            else:
+                print("Você precisa escolher um número")
         elif vezes > 0:
             num = input("Digite o próximo número: ")
-            vezes += 1
-            nums.append(num)
+            if num.isnumeric() == True:
+                vezes += 1
+                nums.append(num)
+            else:
+                print("Você precisa escolher um número")
         
         resp = input("deseja adicionar mais um número? Responda com S ou N: ")
         if resp == 'N':
