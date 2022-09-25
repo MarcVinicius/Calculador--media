@@ -23,4 +23,5 @@ while True:
 for i in nums:
     soma += int(i)
 
+print(nums[0:])
 print("Sua média é", (soma/len(nums)))
