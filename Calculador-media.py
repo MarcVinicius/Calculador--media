@@ -18,7 +18,11 @@ while True:
         if resp == 'N':
             resposta = 'N'
     else:
-        break
+        if vezes > 1:
+            break
+        else:
+            print("você precisa escolher mais de um número")
+            resposta = 'S'
 
 for i in nums:
     soma += int(i)
